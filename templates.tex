@@ -1,0 +1,128 @@
+% !Mode:: "TeX:UTF-8"
+% !TEX program  = xelatex
+
+% 模板名称：YangThesis
+% 模板版本：V1.0
+% 模板作者：JingXuan Yang
+% 联系作者：yangjingxuan@stu.hit.edu.cn
+% 模板来源：数模竞赛模板的二次开发
+% 模板适用：普通课程论文，略作修改可用作毕业设计（论文）
+% 模板编译：XeLaTeX，编译两次，两次，两次！！！
+% 更新时间：4/14/2019
+% 模板说明：本模板尽量把接口留在了类文件外面，但是顾名思义，模板即为
+%                 部分样式的集合，有些样式是定义在类文件里面的，在外面无法
+%                 修改。类文件中注释齐全，很多样式可以个性化定义，建议拥有
+%                 一定LaTeX基础以后再尝试修改类文件（YangThesis.cls）。
+
+% 本模板提供有、无封面两种选择
+% 1、采用封面
+% 模板默认采用封面
+% no-math选项指不采用模板文件对数学符号字体的定义
+% 可在settings.tex里设置数学符号字体
+
+\documentclass[no-math]{YangThesis} 
+
+% 2、去掉封面，添加<withoutpreface>选项
+%\documentclass[no-math, withoutpreface]{YangThesis} 
+
+% 导入配置文件settings.tex，
+% 配置参数均存储在settings.tex文件中，
+% 添加或修改均需在该文件中进行
+\input{settings.tex}
+
+% 封面信息
+% 论文类别
+\papercategory{最优化理论与应用课程报告}
+% 论文标题
+\title{拟牛顿法实验报告}
+
+% 学校名称
+\schoolname{南京航空航天大学}
+% 学院名称
+\departname{计算机科学与技术学院}
+% 专业
+\majorin{计算机技术}
+% 班级
+%\classnumber{中特社17班}
+% 姓名
+\authorname{林国瑞}
+% 学号
+\studentID{SF1916009}
+% 教师
+\teacher{朱琨}
+% 日期
+\dateinput{2019年1月10日}
+
+%%%=====================%%%
+% 开始写文章
+\begin{document}
+
+% 生成标题
+\maketitle
+
+% 页码从1开始计数
+\setcounter{page}{1}
+% 页码采用罗马数字格式
+\pagenumbering{Roman}
+
+\vspace{-1.3cm}
+
+% 生成目录
+\tableofcontents
+% 将目录添加到目录中
+\addcontentsline{toc}{section}{目\,\,录}
+
+
+% 分页，撰写正文
+\clearpage
+% 调整标题与上边的距离
+\vspace{-1cm}
+% 第1章的标题
+\section{什么是科学}
+% 关于论文的主题，基本上就是人工智能和伪科学二选一了，可是，伪科学，迷信，这些内容也已经有不少好的材料了。这种人文学科的问题可能就是值得发表的东西不多吧。何况已发表的也就是那个样子。不容易做出成果来。基本上，我总结一下看到的几篇网页就行了吧。
+	
+% 基本上所有搜集材料的过程结束了，目前不再在网上找阅读材料了，已经足够多了。
+
+% 页码从1开始计数
+\setcounter{page}{1}
+% 页码格式采用阿拉伯数字
+\pagenumbering{arabic}
+\subsection{前提知识}
+
+
+
+
+
+% 正文内容，注意LaTeX分段有两种方法，直接空一行或者使用<\par>
+% 默认首行缩进，不需要在代码编辑区手动敲空格
+
+% 需手动分页，为实现分页与不分页均可
+% \newpage
+
+% Create LaTeX tables online  http://www.tablesgenerator.com/#
+% 这个网站比较神奇，竟然还有文本格式的表格生成，不过从使用角度讲，markdown语法太好用了，估计平常用的格式就是markdown，今天认识到了，日常的wps可以用来画图，可以用来画自己需要的示意图。通过表格的方法，画出时间线图，既能示意，效率也很高。比琢磨半天的xmind清晰明了多了。
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+
+
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{DFP_quasi_newton}
+	\caption{}
+	\label{fig:dfpquasinewton}
+\end{figure}
+
+
+
+\input{appendix.tex}
+
+
+\newpage
+\addcontentsline{toc}{section}{参考文献}
+%\bibliography{opt}
+\printbibliography[heading=bibliography,title=参考文献]
+\end{document} 
